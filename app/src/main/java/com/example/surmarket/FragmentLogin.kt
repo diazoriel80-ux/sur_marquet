@@ -9,11 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-
+import android.widget.TextView
 class FragmentLogin : Fragment() {
+
     private lateinit var ETX_FRGLogin_UserName: EditText
     private lateinit var ETX_FRGLogin_Password: EditText
-    private lateinit var TXV_FRGLogin_RecoverPassword: EditText
+    private lateinit var TXV_FRGLogin_RecoverPassword: TextView
     private lateinit var BTN_FRGLogin_Login: Button
     private lateinit var BTN_FRGLogin_Register: Button
 
@@ -54,22 +55,22 @@ class FragmentLogin : Fragment() {
 
         }
     }
-    private fun SignIn(){
-        val user= ETX_FRGLogin_UserName.text.toString().trim()
-        val password=ETX_FRGLogin_Password.text.toString().trim()
-        if (!verifyIntegrity(user,password))
-        {
-         return
+    private fun SignIn() {
+        val user = ETX_FRGLogin_UserName.text.toString().trim()
+        val password = ETX_FRGLogin_Password.text.toString().trim()
+        if (!verifyIntegrity(user, password)) {
+            return
         }
-        if (verifyCredentials(user,password)){
+        if (verifyCredentials(user, password)) {
 
-            Toast.makeText(requireContext(),getString(R.string.loginWelcome), Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
-            Toast.makeText(requireContext(),getString(R.string.loginError), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.loginWelcome), Toast.LENGTH_SHORT)
+                .show()
+        } else {
+            Toast.makeText(requireContext(), getString(R.string.loginError), Toast.LENGTH_SHORT)
+                .show()
 
         }
+
 
     }
 
@@ -79,12 +80,15 @@ class FragmentLogin : Fragment() {
         var res=true
         if (user.isEmpty()){
             ETX_FRGLogin_UserName.error=getString(R.string.userEmpty)
+            res=false
         }
         else{
             ETX_FRGLogin_UserName.error=null
         }
         if (password.isEmpty()){
             ETX_FRGLogin_Password.error=getString(R.string.passwordEmpty)
+            res=false
+
         }
         else{
             ETX_FRGLogin_Password.error=null

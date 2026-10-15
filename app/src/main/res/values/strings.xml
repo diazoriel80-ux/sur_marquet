@@ -12,4 +12,6 @@
     <string name="loginError">Usuario o contraseña incorrecta</string>
     <string name="userEmpty">ingrese su nombre de usuario\n</string>
     <string name="passwordEmpty">ingrese su contraseña</string>
+
+    <string name="labelLoginFrangment">login\n</string>
 </resources>
