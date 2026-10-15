@@ -14,4 +14,8 @@
     <string name="passwordEmpty">ingrese su contraseña</string>
 
     <string name="labelLoginFrangment">login\n</string>
+    <string name="FRGProductsList_Title">tienda virtual SurMarket</string>
+    <string name="Shopping_Car">Carrito de compra</string>
+    <string name="Seart">buscar producto</string>
+    <string name="FRGProductsList_BTNAddProduct">Añadir producto</string>
 </resources>
