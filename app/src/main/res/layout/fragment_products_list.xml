@@ -98,4 +98,16 @@
             android:layout_marginHorizontal="1sp"
 
             />
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/RCV_FRGProductsList_ProductsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/item_productslist"
+
+
+            />
+
+
 </LinearLayout>

@@ -18,4 +18,6 @@
     <string name="Shopping_Car">Carrito de compra</string>
     <string name="Seart">buscar producto</string>
     <string name="FRGProductsList_BTNAddProduct">Añadir producto</string>
+    <string name="product">producto</string>
+    <string name="ITProductList_BTNBuyProduct">Comprar</string>
 </resources>
