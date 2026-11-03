@@ -24,4 +24,25 @@
     <string name="category">Categoria\n</string>
     <string name="price">Precio</string>
     <string name="addCart">Adicionado al carrito\n</string>
+    <string name="product_image">imagen del producto</string>
+    <string name="FRGProduct_BTNAddImage">añadir imagen</string>
+    <string name="FRGAddProduct_TXVProductName">Nombre del producto</string>
+    <string name="FRGAddProduct_ETXProductName">Nombre</string>
+    <string name="FRGAddProduct_TXVProductPrice">precio</string>
+    <string name="FRGAddProduct_BTNAddImage">añadir imagen</string>
+    <string name="FRGAddProduct_ETXProductPrice">precio</string>
+    <string name="FRGAddProduct_TXVProductStock">Cantidad</string>
+    <string name="FRGAddProduct_ETXProductStock">Cantidad</string>
+    <string name="FRGAddProduct_TXVProductDescription">Descripción</string>
+    <string name="FRGAddProduct_ETXProductDescription">Descripción</string>
+    <string name="category_men">Ropa de Varón</string>
+    <string name="category_woman">Ropa de Mujer</string>
+    <string name="category_children">Ropa de Niño</string>
+    <string name="category_Baby">Ropa de bebe</string>
+    <string name="category_Shoes">Calzados</string>
+    <string name="category_Accesories">Accesorios</string>
+    <string name="category_Other">Otros/Varios</string>
+    <string name="availability_available">Disponible</string>
+    <string name="aailable_not_available">no disponible</string>
+    <string name="FRGAddProduct_BTNAddProduct">Añadir producto</string>
 </resources>

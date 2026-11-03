@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentAddProductos">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fragment_padding">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/RCV_FRGAddProduct_Image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cardview_image_height"
+                android:layout_marginBottom="@dimen/cardview_default_margin_buttom"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/cardview_default_corner_radius_2"
+                app:cardElevation="@dimen/cardview_default_elevation"
+
+                >
+
+                <ImageView
+                    android:id="@+id/IMV_FRGAddProduct_Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/product_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s_market">
+
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/BTN_AddProduct_addImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ITMarginBottom"
+                android:text="@string/FRGAddProduct_BTNAddImage"
+                android:textSize="@dimen/FRGButtonTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TXV_FRGAddProduct_ProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FRGAddProduct_TXVProductName"
+                android:textSize="@dimen/FRGAbelTextSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ETX_FRGAddProduct_ProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/FRGAddProduct_ETXProductName"
+                android:inputType="text"
+                android:textSize="@dimen/FRGEditTextSize" />
+
+            <TextView
+                android:id="@+id/TXV_FRGAddProduct_ProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FRGAddProduct_TXVProductPrice"
+                android:textSize="@dimen/FRGAbelTextSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ETX_FRGAddProduct_productPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/FRGAddProduct_ETXProductPrice"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/FRGEditTextSize" />
+
+
+            <TextView
+                android:id="@+id/TXV_FRGAddProduct_ProductStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FRGAddProduct_TXVProductStock"
+                android:textSize="@dimen/FRGAbelTextSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ETX_FRGAddProduct_productStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/FRGAddProduct_ETXProductStock"
+                android:inputType="number"
+                android:textSize="@dimen/FRGEditTextSize" />
+
+            <TextView
+                android:id="@+id/TXV_FRGAddProduct_ProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FRGAddProduct_TXVProductDescription"
+                android:textSize="@dimen/FRGAbelTextSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ETX_FRGAddProduct_productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textView_multiline_height"
+                android:layout_marginBottom="16dp"
+                android:inputType="text"
+                android:scrollbars="vertical"
+                android:textSize="@dimen/FRGEditTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Men"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_men"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Woman"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_woman"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_children"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_children"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Baby"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_Baby"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Shoes"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_Shoes"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Accesories"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_Accesories"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Other"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/category_Other"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+            </LinearLayout>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/CHP_FRGAddProduct_Availability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Available"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/availability_available"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/CHP_FRGAddProduct_Not_Available"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/chip_margin_end"
+                    android:text="@string/aailable_not_available"
+                    android:textSize="@dimen/FRGAbelTextSize"
+
+                    />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <Button
+                android:id="@+id/BTN_AddProduct_AddProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ITMarginBottom"
+                android:text="@string/FRGAddProduct_BTNAddProduct"
+                android:textSize="@dimen/FRGButtonTextSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
