@@ -21,4 +21,7 @@
     <string name="product">producto</string>
     <string name="ITProductList_BTNBuyProduct">Comprar</string>
     <string name="labelProductsListFragment">Lista de productos</string>
+    <string name="category">Categoria\n</string>
+    <string name="price">Precio</string>
+    <string name="addCart">Adicionado al carrito\n</string>
 </resources>
