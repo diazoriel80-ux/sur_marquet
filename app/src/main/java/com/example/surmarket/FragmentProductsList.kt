@@ -58,6 +58,9 @@ class FragmentProductsList : Fragment(){
          Toast.makeText(requireContext(),getString(R.string.AddProduct), Toast.LENGTH_SHORT).show()
         findNavController().navigate(R.id.action_products_list_to_add_product)
      }
+     IMV_FRGProductsList_Shoppingcart.setOnClickListener {
+         findNavController().navigate(R.id.action_products_list_to_cart)
+     }
 
  }
     private fun configureRecyclerView(){

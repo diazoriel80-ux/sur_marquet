@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentCart">
+
+    <!-- Header Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TitleHeight"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/IMV_FRGCart_Back"
+            android:layout_width="@dimen/imageViewIconSize"
+            android:layout_height="@dimen/imageViewIconSize"
+            android:clickable="true"
+            android:contentDescription="@string/FRGCart_Title"
+            android:focusable="true"
+            android:padding="@dimen/imageViewIcon_Padding"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_main_title" />
+
+        <TextView
+            android:id="@+id/TXV_FRGCart_Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/imageViewIconSize"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/FRGCart_Title"
+            android:textColor="@color/text_main_title"
+            android:textSize="@dimen/FRGTitleTextSize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RCV_FRGCart_CartList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_cart" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BTN_FRGCart_FinalizarCompra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/FRGCart_BTNFinalizarCompra"
+        android:textSize="@dimen/FRGButtonTextSize"
+        android:textStyle="bold" />
+
+</LinearLayout>

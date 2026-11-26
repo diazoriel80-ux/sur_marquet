@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentProfile">
+
+    <!-- Header Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/TitleHeight"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/IMV_FRGProfile_Back"
+            android:layout_width="@dimen/imageViewIconSize"
+            android:layout_height="@dimen/imageViewIconSize"
+            android:clickable="true"
+            android:contentDescription="@string/FRGProfile_Title"
+            android:focusable="true"
+            android:padding="@dimen/imageViewIcon_Padding"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/text_main_title" />
+
+        <TextView
+            android:id="@+id/TXV_FRGProfile_Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/imageViewIconSize"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/FRGProfile_Title"
+            android:textColor="@color/text_main_title"
+            android:textSize="@dimen/FRGTitleTextSize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/FRGContainerPadding">
+
+            <!-- Profile Avatar & User Info -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/RCV_FRGProfile_Avatar"
+                android:layout_width="@dimen/profile_avatar_size"
+                android:layout_height="@dimen/profile_avatar_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="55dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/IMV_FRGProfile_AvatarImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/FRGProfile_Title"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s_market" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/TXV_FRGProfile_UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/FRGProfile_UserName"
+                android:textColor="@color/text_main_title"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TXV_FRGProfile_UserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="@string/FRGProfile_UserId"
+                android:textColor="@color/text_sub_title"
+                android:textSize="@dimen/FRGTextView2TextSize" />
+
+            <!-- Info Item: Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_EmailTitle"
+                        android:src="@drawable/ic_email"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_EmailTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_EmailTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_EmailValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_EmailValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Nombre Completo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_FullNameTitle"
+                        android:src="@drawable/ic_person"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_FullNameTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_FullNameTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_FullNameValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_FullNameValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Teléfono -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_PhoneTitle"
+                        android:src="@drawable/ic_phone"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PhoneTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_PhoneTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PhoneValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_PhoneValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Dirección -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_AddressTitle"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_AddressTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_AddressTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_AddressValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_AddressValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Fecha de Registro -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_RegisterDateTitle"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_RegisterDateTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_RegisterDateTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_RegisterDateValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_RegisterDateValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Último Acceso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_LastAccessTitle"
+                        android:src="@drawable/ic_clock"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_LastAccessTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_LastAccessTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_LastAccessValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_LastAccessValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Grupos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_GroupsTitle"
+                        android:src="@drawable/ic_group"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_GroupsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_GroupsTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_GroupsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_GroupsValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Info Item: Permisos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/profile_item_margin_bottom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/profile_icon_bg_size"
+                    android:layout_height="@dimen/profile_icon_bg_size"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_icon_container">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/FRGProfile_PermissionsTitle"
+                        android:src="@drawable/ic_key"
+                        app:tint="@color/text_main_title" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PermissionsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_PermissionsTitle"
+                        android:textColor="@color/text_main_title"
+                        android:textSize="@dimen/FRGAbelTextSize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TXV_FRGProfile_PermissionsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FRGProfile_PermissionsValue"
+                        android:textColor="@color/text_sub_title"
+                        android:textSize="@dimen/FRGTextView2TextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Button Cambiar contraseña -->
+            <Button
+                android:id="@+id/BTN_FRGProfile_ChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/FRGProfile_BTNChangePassword"
+                android:textSize="@dimen/FRGButtonTextSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

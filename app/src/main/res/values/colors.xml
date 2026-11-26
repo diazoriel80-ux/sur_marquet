@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="gray">#FFEEEEEE</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="icon_container_bg">#F2F4F8</color>
+    <color name="text_sub_title">#7A8B9B</color>
+    <color name="text_main_title">#2D3142</color>
 </resources>
